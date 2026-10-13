@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#111111">
+<meta name="description" content="Suprema AI Studio creates practical social media content and client outreach for small businesses.">
+<title>Suprema AI Studio</title>
+<style>
+:root{--bg:#0d0e10;--panel:#17191d;--panel2:#202228;--text:#f7f7f7;--muted:#a9adb7;--gold:#e5bf62;--line:#30333a;--green:#9ee3b1}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top right,#282215 0,transparent 36%),var(--bg);color:var(--text);font:16px/1.5 Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+main{max-width:1040px;margin:auto;padding:28px 18px 60px}.top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:28px}.brand{display:flex;align-items:center;gap:12px}.mark{width:46px;height:46px;border-radius:14px;background:#222;display:grid;place-items:center;color:var(--gold);font-size:24px;border:1px solid #4c4126}.eyebrow{font-size:11px;letter-spacing:2px;color:var(--gold);font-weight:800}.brand h1{font-size:20px;margin:0}.pill{border:1px solid #4c4126;color:var(--gold);border-radius:999px;padding:6px 10px;font-size:12px}
+.hero{margin-bottom:24px}.hero h2{font-size:clamp(30px,5vw,48px);line-height:1.08;letter-spacing:-1.4px;margin:0 0 12px;max-width:720px}.hero h2 span{color:var(--gold)}.hero p{color:var(--muted);max-width:680px;margin:0}
+.layout{display:grid;grid-template-columns:minmax(0, .95fr) minmax(0,1.05fr);gap:18px}.card{background:rgba(23,25,29,.96);border:1px solid var(--line);border-radius:20px;padding:22px;min-width:0}.card h3{font-size:18px;margin:0 0 4px}.sub{color:var(--muted);font-size:13px;margin:0 0 18px}
+label{display:block;font-size:13px;font-weight:700;margin:15px 0 7px}input,textarea,select{width:100%;background:#101114;color:var(--text);border:1px solid #393c44;border-radius:11px;padding:12px 13px;font:inherit;outline:none}textarea{resize:vertical;min-height:86px}input:focus,textarea:focus,select:focus{border-color:var(--gold)}.twocol{display:grid;grid-template-columns:1fr 1fr;gap:12px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:12px;padding:12px 16px;font:inherit;font-weight:800;cursor:pointer}.primary{background:var(--gold);color:#17130a;width:100%;margin-top:20px}.secondary{background:var(--panel2);border:1px solid var(--line);color:var(--text)}button:disabled{opacity:.55;cursor:wait}.hint{font-size:12px;color:var(--muted);margin-top:12px}.resultbox{white-space:pre-wrap;overflow-wrap:anywhere;min-height:280px;background:#101114;border:1px solid var(--line);border-radius:14px;padding:16px;color:#ececf0;font-size:14px}.resulthead{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:0 0 12px}.status{font-size:12px;color:var(--muted);min-height:20px}.footer{border-top:1px solid var(--line);margin-top:28px;padding-top:18px;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}.hidden{display:none}
+@media(max-width:760px){main{padding:18px 12px 40px}.layout{grid-template-columns:1fr}.card{padding:17px}.pill{display:none}.hero h2{font-size:36px}.twocol{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<main>
+  <header class="top">
+    <div class="brand"><div class="mark">✦</div><div><div class="eyebrow">SUPREMA DIGITAL</div><h1>Suprema AI Studio</h1></div></div>
+    <div class="pill">VERSION 2 · STARTER</div>
+  </header>
+  <section class="hero">
+    <h2>Good content. <span>Less guesswork.</span></h2>
+    <p>Create ready-to-edit captions, video hooks, hashtags and customer outreach for your business. Built for creators and small businesses in Uganda and beyond.</p>
+  </section>
+  <div class="layout">
+    <section class="card">
+      <h3>Build your content pack</h3><p class="sub">Add a few details. The AI will tailor the output to your brief.</p>
+      <form id="contentForm">
+        <label for="business">Business name or industry</label>
+        <input id="business" maxlength="120" placeholder="e.g. Suprema Digital, salon, restaurant" required>
+        <label for="offer">What are you promoting?</label>
+        <textarea id="offer" maxlength="1200" placeholder="Describe your service, offer, audience and any real prices..." required></textarea>
+        <div class="twocol">
+          <div><label for="platform">Platform</label><select id="platform"><option>TikTok</option><option>Instagram</option><option>WhatsApp Business</option><option>Facebook</option><option>Multiple platforms</option></select></div>
+          <div><label for="goal">Main goal</label><select id="goal"><option>Get customers</option><option>Increase engagement</option><option>Sell a product</option><option>Build brand awareness</option><option>Find potential clients</option></select></div>
+        </div>
+        <div class="twocol">
+          <div><label for="tone">Writing style</label><select id="tone"><option>Professional</option><option>Bold and catchy</option><option>Friendly and relatable</option><option>Premium and elegant</option></select></div>
+          <div><label for="language">Language</label><select id="language"><option>English</option><option>Luganda</option><option>English and Luganda</option></select></div>
+        </div>
+        <label for="extra">Extra instructions (optional)</label>
+        <input id="extra" maxlength="500" placeholder="e.g. target customers in Mukono">
+        <button class="btn primary" id="generate" type="submit">✦ Generate content</button>
+        <p class="hint">Review every claim, price and contact detail before publishing. AI can make mistakes.</p>
+      </form>
+    </section>
+    <section class="card">
+      <div class="resulthead"><div><h3>Your content pack</h3><p class="sub" style="margin:4px 0 0">Your generated result appears here.</p></div><button class="btn secondary" id="copy" type="button">Copy</button></div>
+      <div id="status" class="status" role="status" aria-live="polite">Ready when you are.</div>
+      <div id="result" class="resultbox">Your hooks, captions, hashtags and call to action will appear here.</div>
+      <button class="btn secondary" id="whatsapp" type="button" style="margin-top:12px;width:100%">Prepare WhatsApp enquiry</button>
+      <p class="hint">This opens WhatsApp with a draft enquiry to Suprema Digital. Set your business number in the script before launch.</p>
+    </section>
+  </div>
+  <footer class="footer"><span>© <span id="year"></span> Suprema Digital</span><span>Made for practical creativity · Uganda</span></footer>
+</main>
+<script>
+const $ = (id) => document.getElementById(id);
+let lastResult = "";
+$("year").textContent = new Date().getFullYear();
+
+$("contentForm").addEventListener("submit", async (event) => {
+  event.preventDefault();
+  const payload = {
+    business: $("business").value.trim(),
+    offer: $("offer").value.trim(),
+    platform: $("platform").value,
+    goal: $("goal").value,
+    tone: $("tone").value,
+    language: $("language").value,
+    extra: $("extra").value.trim()
+  };
+  if (!payload.business || !payload.offer) return;
+  $("generate").disabled = true;
+  $("generate").textContent = "Generating…";
+  $("status").textContent = "Creating your content pack. This may take a few seconds.";
+  $("result").textContent = "";
+  try {
+    const response = await fetch("/api/generate", {
+      method: "POST",
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify(payload)
+    });
+    const data = await response.json().catch(() => ({}));
+    if (!response.ok) throw new Error(data.error || "The AI request failed. Please try again.");
+    lastResult = data.text || "No text was returned. Please try again.";
+    $("result").textContent = lastResult;
+    $("status").textContent = "Done. Review and edit before publishing.";
+  } catch (error) {
+    $("status").textContent = "Could not generate content.";
+    $("result").textContent = error.message + "\n\nIf testing locally, this app needs the server-side API function and a valid GEMINI_API_KEY environment variable.";
+  } finally {
+    $("generate").disabled = false;
+    $("generate").textContent = "✦ Generate content";
+  }
+});
+
+$("copy").addEventListener("click", async () => {
+  if (!lastResult) { $("status").textContent = "Generate content first."; return; }
+  try { await navigator.clipboard.writeText(lastResult); $("status").textContent = "Copied to clipboard."; }
+  catch { $("status").textContent = "Clipboard access failed. Select and copy the result manually."; }
+});
+
+$("whatsapp").addEventListener("click", () => {
+  const message = encodeURIComponent("Hello Suprema Digital, I'm interested in your AI content and social media marketing services. Please share your packages.");
+  // Replace 256748505723 with your confirmed WhatsApp number if needed.
+  window.open("https://wa.me/256748505723?text=" + message, "_blank", "noopener");
+});
+</script>
+</body>
+</html>
